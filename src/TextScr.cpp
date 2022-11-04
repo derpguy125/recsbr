@@ -511,7 +511,7 @@ void PutTextScript(void)
 		text_offset = 0;
 
 	for (i = 0; i < 4; ++i)
-		PutBitmap3(&gTS.rcText, PixelToScreenCoord(TEXT_LEFT + text_offset), PixelToScreenCoord(gTS.offsetY + gTS.ypos_line[i] + gTS.rcText.top), &gRect_line, (SurfaceID)(SURFACE_ID_TEXT_LINE1 + i));
+		PutBitmap3(&gTS.rcText, PixelToScreenCoord(TEXT_LEFT + text_offset), PixelToScreenCoord(gTS.offsetY + gTS.ypos_line[i] + gTS.rcText.top), &gRect_line, (SurfaceID)(SURFACE_ID_TEXT_LINE1+i));
 
 	// Draw NOD cursor
 	if ((gTS.wait_beam++ % 20 > 12) && gTS.mode == 2)
@@ -556,11 +556,11 @@ void PutTextScript(void)
 
 		if (gTS.item < 1000)
 		{
-			rect.left = (gTS.item % 16) * 16;
-			rect.right = rect.left + 16;
+			rect.left = (gTS.item % 32) * 32;
+			rect.right = rect.left + 32;
 			rect.top = (gTS.item / 16) * 16;
 			rect.bottom = rect.top + 16;
-			PutBitmap3(&grcFull, PixelToScreenCoord((WINDOW_WIDTH / 2) - 12), PixelToScreenCoord(gTS.item_y), &rect, SURFACE_ID_ARMS_IMAGE);
+			PutBitmap3(&grcFull, PixelToScreenCoord((WINDOW_WIDTH / 2) - 16), PixelToScreenCoord(gTS.item_y), &rect, SURFACE_ID_ARMS_IMAGE);
 		}
 		else
 		{

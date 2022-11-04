@@ -749,7 +749,7 @@ void PutText(int x, int y, const char *text, unsigned long color)
 
 void PutText2(int x, int y, const char *text, unsigned long color, SurfaceID surf_no)
 {
-	DrawText(font, surf[surf_no], x * mag, y + 1 * mag, RGB(0x64, 0x72, 0xCF), text);
+	//DrawText(font, surf[surf_no], x * mag, y + 1 * mag, RGB(0x64, 0x72, 0xCF), text);
 	DrawText(font, surf[surf_no], x * mag, y * mag, color, text);
 }
 
