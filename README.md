@@ -1,6 +1,23 @@
-# RECSBR
+# RECSBR??
 
-RECSBR is a remake of the Cave Story Beta.
+NOTE: This isn't necessarily a continuation of RECSBR, it's more of my own thing built on top of RECSBR.
+REALLY wanted to make a [Yume Nikki](https://store.steampowered.com/app/650700/Yume_Nikki/) / [B3313](https://www.youtube.com/watch?v=cHbFPSoVqE8) / [LSD: Dream Emulator](https://en.wikipedia.org/wiki/LSD:_Dream_Emulator)-ish thing with Cave Story for a while now, and I thought: _Hmm, why not build it on top of luRaichu's Beta Remake? It has beta things, like B3313, and if I can get it working with [Booster's Lab](https://github.com/taedixon/boosters-lab) then maybe it could be a reality?_
+
+My [first attempt](https://gitdab.com/derpguy125/DoukutsuNikki) didn't get very far, and was made before I even HAD that idea. It used a whole lot of assets and code from RECSBR, and I didn't even hide that fact, with the temporary intro saying that I _"am a filthy thief"_, and one of my old commits saying _"I LOVE STEALING PIRACY STEALING LURAICHU'S CODE FROM RECSBR"_
+
+So this attempt should be better, in a way.
+
+And if I get bored of it, then... well... I'm screwed!
+
+Oh yeah, one more thing...
+
+## Dave
+this is dave
+![Dave](https://cdn.discordapp.com/attachments/892140166309892136/905267141299802152/dorve_reale.png)
+
+say hi to dave
+
+please say hi to him
 
 ## Dependencies
 
