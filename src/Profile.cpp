@@ -314,7 +314,7 @@ BOOL InitializeGame(void)
 	ClearPermitStage();
 	StartMapping();
 	InitFlags();
-	if (!TransferStage(2, 200, 9, 7))
+	if (!TransferStage(2, 200, 13, 7))
 	{
 #ifdef JAPANESE
 		Backend_ShowMessageBox("エラー", "ステージの読み込みに失敗");

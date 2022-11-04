@@ -767,9 +767,12 @@ int TextScriptProc(void)
 						if (!TransferStage(z, w, x, y))
 						{
 							#ifdef JAPANESE
-							Backend_ShowMessageBox("エラー", "ステージの読み込みに失敗");
+							std::string weenie = "ID " + std::to_string(z) + " のステージは存在しないため転送できません。\nPixMap (またはその他の洞窟物語マップ エディター) を使用して、このステージの TextScript を修正してください。" 
+							Backend_ShowMessageBox("エラー", weenie.c_str());
 							#else
-							Backend_ShowMessageBox("Bruh!", "Could not TransferStage, man.");
+							std::string weenie = "Cannot transfer to stage with the ID " + std::to_string(z) + " because it does not exist.\nPlease use PixMap (or any other Cave Story map editor) to fix the TextScript for this stage.";
+							
+							Backend_ShowMessageBox("Error", weenie.c_str());
 							#endif
 
 							return enum_ESCRETURN_exit;
