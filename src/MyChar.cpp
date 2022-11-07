@@ -309,7 +309,7 @@ void ActMyChar_Normal(BOOL bKey)
 
 		if (gMC.equip & EQUIP_BOOSTER_0_8)
 		{
-			gMC.boost_cnt = 50;
+			gMC.boost_cnt = 1;
 		}
 		else if (gMC.equip & EQUIP_BOOSTER_2_0)
 		{
@@ -467,7 +467,11 @@ void ActMyChar_Normal(BOOL bKey)
 			else
 			{
 				gMC.ym = -jump;
-				PlaySoundObject(15, SOUND_MODE_PLAY);
+				if (gMC.equip & EQUIP_BOOSTER_0_8) {
+					PlaySoundObject(56, SOUND_MODE_PLAY);
+				} else {
+					PlaySoundObject(15, SOUND_MODE_PLAY);
+				}
 			}
 		}
 	}
@@ -544,11 +548,11 @@ void ActMyChar_Normal(BOOL bKey)
 	else if (gMC.equip & EQUIP_BOOSTER_0_8 && gMC.boost_sw != 0 && gMC.ym > -0x400)
 	{
 		// Upwards force
-		gMC.ym -= 0x20;
+		gMC.ym = -0x400;
 
 		if (gMC.boost_cnt % 3 == 0)
 		{
-			SetCaret(gMC.x, gMC.y + (gMC.hit.bottom / 2), 7, 3);
+			//SetCaret(gMC.x, gMC.y + (gMC.hit.bottom / 2), 7, 3);
 			PlaySoundObject(113, SOUND_MODE_PLAY);
 		}
 

@@ -1,6 +1,5 @@
 #0000
 <FRE<WAI9999<END
-
 #1000
 <MSG<TURNo weapon.<WAI9999<END
 #1001
@@ -23,7 +22,6 @@
 <MSG<TURFrontier<WAI9999<END
 #1013
 <MSG<TURSpur<WAI9999<END
-
 #5000
 <MSG<TURNo item.<WAI9999<END
 #5001
@@ -61,7 +59,7 @@
 #5017
 <MSG<TURClinic Key<WAI9999<END
 #5018
-<MSG<TURBooster v0.8<WAI9999<END
+<MSG<TURCape<WAI9999<END
 #5019
 <MSG<TURArms Barrier<WAI9999<END
 #5020
@@ -125,18 +123,17 @@
 #5049
 <MSG<TURSpur<WAI9999<END
 #5050
-<MSG<TURMandarin<WAI9999<END//Orange
+<MSG<TURMandarin<WAI9999<END
 #5051
 <MSG<TURRocket Parts 2<WAI9999<END
 #5052
 <MSG<TURGreen Monster Costume<WAI9999<END
-
 #6000
 <MSG<TURNo item.<WAI9999<END
 #6001
 <MSG<TURIt's the key to Su-'s house.<WAI9999<END
 #6002
-<PRI<EVE7002<MPJ7002<MSGNo data for this floor.<NOD<CLR<END
+<PRI<EVE7002
 #6003
 <MSG<TURThe key to Santa's house.<WAI9999<END
 #6004
@@ -181,10 +178,11 @@ anything and everything...<WAI9999<END
 <MSG<TURIt says "Labyrinth Clinic".<WAI9999<END
 #6018
 <FLJ0742:7018
-<KEY<MSGPush the jump button again in
-midair to fly even higher.<NOD<CLR
+<KEY<MSGA red cape.<NOD It allows you to
+double jump, letting you get to
+places you couldn't get to before.<NOD<CLR
 Do you want to equip it?<YNJ0000<EQ+0001<FL+0742<EQ-0032<FL-0743<MSG
-Booster equipped.<NOD<WAI0003<FRE<EVE5018
+Equipped the Cape.<NOD<WAI0003<FRE<EVE5018
 #6019
 <MSG<TURWhen you take damage, the amount
 of weapon energy lost will be halved.<WAI9999<END
@@ -263,7 +261,6 @@ Pride of Itoh, the cowardly man.<WAI9999<END
 #6031
 <MSG<TURSmall and profoundly heavy.
 It has no use.<WAI9999<END
-
 #6032
 <MSG<TURHey! We there yet?<WAI9999<END
 #6033
@@ -370,17 +367,14 @@ can't use it with the Mimiga Mask on.<WAI9999<END
 <MSG<TURA funny big costume of a green smiley
 monster given by Santa. However, you
 can't use it with the Mimiga Mask on.<WAI9999<END
-
 #7002
 <MLP<END
-
 #7018
 <KEY<MSGDo you want to remove it?<YNJ0000<EQ-0001<FL-0742<MSG
-Deequipped Booster.<NOD<WAI0003<FRE<EVE5018
+Deequiped the Cape.<NOD<WAI0003<FRE<EVE5018
 #7019
 <KEY<MSGDo you want to remove it?<YNJ0000<EQ-0032<FL-0743<MSG
 Deequipped Booster v2.0.<NOD<WAI0003<FRE<EVE5023
-
 #7021
 <KEY<MSGDo you want to remove it?<YNJ0000<EQ-0016<FL-0721<MSG
 Deequipped the Air Tank.<NOD<WAI0003<FRE<EVE5021
@@ -390,11 +384,9 @@ Deequipped the Air Tank.<NOD<WAI0003<FRE<EVE5021
 #7023
 <KEY<MSGDo you want to remove it?<YNJ0000<EQ-0016<FL-0721<MSG
 Deequipped the Air Tank.<NOD<WAI0003<FRE<EVE5021
-
 #7038
 <KEY<MSGDo you want to remove it?<YNJ0000<EQ-0128<FL-0722<MSG
 Deequipped the Whimsical Star.<NOD<WAI0003<FRE<EVE5038
-
 #7052
 <KEY<MSGDo you want to remove it?<YNJ0000<MIM0000<FL-0752<MSG
 Deequipped the Monster Costume.<NOD<WAI0003<FRE<EVE5052
@@ -405,4 +397,3 @@ Deequipped the Monster Costume.<NOD<WAI0003<FRE<EVE5052
 <KEY<MSGDo you want to remove it?<YNJ0000<MIM0002<FL-0752<MSG
 Deequipped the Monster Costume.<NOD<WAI0003<FRE<EVE5052
 #7055
-//<MSG<ML+xxxx<IT-xxxx Max life increased by X.<NOD<END

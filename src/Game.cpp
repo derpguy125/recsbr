@@ -310,9 +310,13 @@ static int ModeOpening(void)
 
 static int ModeTitle(void)
 {
+	
+	int frame_x;
+	int frame_y;
+	
 	// Set rects
-	RECT rcTitle = {0, 0, 144, 40};
-	RECT rcPixel = {0, 0, 160, 16};
+	RECT rcTitle = {0, 0, 426, 240};
+	RECT rcPixel = {0, 0, 256, 16};
 	RECT rcNew = {144, 0, 192, 16};
 	RECT rcContinue = {144, 16, 192, 32};
 
@@ -398,17 +402,7 @@ static int ModeTitle(void)
 	if (time_counter && time_counter < 3 * 60 * (gb60fps ? 60 : 50))	// 3 minutes
 		char_type = 4;*/
 
-	// Set music to character's specific music
-	if (char_type == 1)
-		ChangeMusic(MUS_CAVE_STORY);
-	else if (char_type == 2)
-		ChangeMusic(MUS_CAVE_STORY);
-	else if (char_type == 3)
-		ChangeMusic(MUS_CAVE_STORY);
-	else if (char_type == 4)
-		ChangeMusic(MUS_CAVE_STORY);
-	else
-		ChangeMusic(MUS_CAVE_STORY);
+		ChangeMusic(MUS_CURLY);
 
 	// Reset cliprect, flags, and give the player the Nikumaru counter
 	grcGame.left = 0;
@@ -424,6 +418,13 @@ static int ModeTitle(void)
 
 	// Start loop
 	wait = 0;
+	
+	std::string path;
+
+	path = "bkScape";
+
+	InitBack(path.c_str(), 7);
+	GetFramePosition(&frame_x, &frame_y);
 
 	while (1)
 	{
@@ -485,9 +486,14 @@ static int ModeTitle(void)
 		// Animate character cursor
 		if (++anime >= 40)
 			anime = 0;
+		
+		// Draw moon background
+		if(anime %2 == 0)
+			ActBack();
+		PutBack(frame_x, frame_y);
 
 		// Draw title
-		CortBox(&grcGame, back_color);
+		//CortBox(&grcGame, back_color);
 
 		// Draw version
 		//PutBitmap3(&grcGame, PixelToScreenCoord((WINDOW_WIDTH / 2) - 60), PixelToScreenCoord(WINDOW_HEIGHT - 24), &rcVersion, SURFACE_ID_TEXT_BOX);
@@ -499,10 +505,10 @@ static int ModeTitle(void)
 		//PutNumber4((WINDOW_WIDTH / 2) + 28, WINDOW_HEIGHT - 24, v4, FALSE);
 
 		// Draw main title
-		PutBitmap3(&grcGame, PixelToScreenCoord(8), PixelToScreenCoord(8), &rcTitle, SURFACE_ID_TITLE);
-		PutBitmap3(&grcGame, PixelToScreenCoord(24), PixelToScreenCoord(48), &rcNew, SURFACE_ID_TITLE);
-		PutBitmap3(&grcGame, PixelToScreenCoord(24), PixelToScreenCoord(64), &rcContinue, SURFACE_ID_TITLE);
-		//PutBitmap3(&grcGame, PixelToScreenCoord((WINDOW_WIDTH / 2) - 80), PixelToScreenCoord(WINDOW_HEIGHT - 48), &rcPixel, SURFACE_ID_PIXEL);
+		PutBitmap3(&grcGame, PixelToScreenCoord(0), PixelToScreenCoord(0), &rcTitle, SURFACE_ID_TITLE);
+		//PutBitmap3(&grcGame, PixelToScreenCoord((WINDOW_WIDTH / 2)), PixelToScreenCoord(128), &rcNew, SURFACE_ID_TITLE);
+		//PutBitmap3(&grcGame, PixelToScreenCoord((WINDOW_WIDTH / 2)), PixelToScreenCoord(144), &rcContinue, SURFACE_ID_TITLE);
+		//PutBitmap3(&grcGame, PixelToScreenCoord((WINDOW_WIDTH / 2) - 128), PixelToScreenCoord(WINDOW_HEIGHT - 48), &rcPixel, SURFACE_ID_PIXEL);
 
 		// Draw character cursor
 		switch (char_type)
@@ -530,15 +536,15 @@ static int ModeTitle(void)
 		}
 
 		if (!bContinue)
-			char_y = 48;
+			char_y = 128;
 		else
-			char_y = 64;
+			char_y = 144;
 
 		// Pixel being redundant
 		if (!bContinue)
-			PutBitmap3(&grcGame, PixelToScreenCoord(8), PixelToScreenCoord(char_y), &char_rc, char_surf);
+			PutBitmap3(&grcGame, PixelToScreenCoord((WINDOW_WIDTH / 2) - 16), PixelToScreenCoord(char_y), &char_rc, char_surf);
 		else
-			PutBitmap3(&grcGame, PixelToScreenCoord(8), PixelToScreenCoord(char_y), &char_rc, char_surf);
+			PutBitmap3(&grcGame, PixelToScreenCoord((WINDOW_WIDTH / 2) - 16), PixelToScreenCoord(char_y), &char_rc, char_surf);
 
 		// Draw carets
 		PutCaret(0, 0);
@@ -755,12 +761,14 @@ static int ModeAction(void)
 
 		PutMapName(FALSE);
 		PutTimeCounter(16, 8);
-
-		PutMyLife(TRUE);
-		PutCion();
-		PutMyAir((WINDOW_WIDTH / 2) - 40, (WINDOW_HEIGHT / 2) - 16);
-		PutActiveArmsList();
-		PutArmsEnergy(TRUE);
+	
+		//if (g_GameFlags & 2) {
+			PutMyLife(TRUE);
+			PutCion();
+			PutMyAir((WINDOW_WIDTH / 2) - 40, (WINDOW_HEIGHT / 2) - 16);
+			PutActiveArmsList();
+			PutArmsEnergy(TRUE);
+		//}
 
 		if (g_GameFlags & 8)
 		{

@@ -39,7 +39,7 @@ static BOOL bFPS = FALSE;
 #ifdef JAPANESE
 static const char* const lpWindowName = "洞窟物語";	// "Cave Story"
 #else
-static const char* const lpWindowName = "some RECSBR modification";
+static const char* const lpWindowName = "DREAMSCAPE";
 #endif
 
 // Framerate stuff

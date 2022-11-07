@@ -79,7 +79,7 @@ static const struct
 	{53, "Wav/EnemyHurt.wav", SOUND_TYPE_OTHER},//small enemy hurt
 	{54, "Wav/EnemyHurt.wav", SOUND_TYPE_OTHER},//"cool" enemy hurt
 	{55, "PixTone/055.pxt", SOUND_TYPE_PIXTONE},//another enemy squeak
-	//{56, "PixTone/056.pxt", SOUND_TYPE_PIXTONE},//watersplash
+	{56, "Wav/Jump.wav", SOUND_TYPE_OTHER},//watersplash
 	{57, "PixTone/057.pxt", SOUND_TYPE_PIXTONE},//weird and fast enemy hurt sfct
 	{58, "PixTone/058.pxt", SOUND_TYPE_PIXTONE},//short noise???
 	{59, "PixTone/059.pxt", SOUND_TYPE_PIXTONE},//spur charge 1
@@ -105,7 +105,7 @@ static const struct
 	{110, "PixTone/110.pxt", SOUND_TYPE_PIXTONE},//idk, click
 	{111, "PixTone/111.pxt", SOUND_TYPE_PIXTONE},//idk, low pitched thud
 	{112, "PixTone/112.pxt", SOUND_TYPE_PIXTONE},//idk, slightly higher pitched thud
-	{113, "PixTone/113.pxt", SOUND_TYPE_PIXTONE},//booster
+	{113, "Wav/DJump.wav", SOUND_TYPE_OTHER},//booster
 	{114, "PixTone/114.pxt", SOUND_TYPE_PIXTONE},//ALERT: CORE IS WOUNDED, CORE IS WOUNDED
 	{115, "PixTone/115.pxt", SOUND_TYPE_PIXTONE},//Core thrusting towards your ass
 	{116, "PixTone/116.pxt", SOUND_TYPE_PIXTONE},//epic idk sound
